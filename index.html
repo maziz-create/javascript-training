@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Clock</title>
 </head>
-<body>
-    
+
+<body class="bg-dark text-light">
+    <div class="text-center">
+        <p class="display-1 text-danger">Hoşgeldin!</p>
+        <div class="text1 text-center text-warning">
+            Merhaba, <strong><span class="text-uppercase" id="myName"></span></strong>!
+        </div>
+        <div id="myClock" class="text-primary" onload="showTime()"></div>
+        <div class="text-success text-center">
+            tarihinde
+            <strong>Kodluyoruz Frontend Web Development Patikası</strong>'nın
+            Javascript bölümü 1. Ödevindesiniz.
+        </div>
+    </div>
+    <script src="clock.js"></script>
 </body>
+
 </html>
