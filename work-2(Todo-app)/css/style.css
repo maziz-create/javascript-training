@@ -1,3 +1,63 @@
+:root {
+    --pink: #d63384;
+    --pink2: #f759a8;
+    --teal: #20c997;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: #d6cfcf;
 }
+
+/* bg colors */
+
+.bg-pink {
+    background-color: var(--pink)
+}
+
+.bg-pink-2 {
+    background-color: var(--pink2);
+}
+
+.bg-teal {
+    background-color: var(--teal)
+}
+
+/* text colors */
+
+.text-pink {
+    color: var(--pink);
+}
+
+.text-teal {
+    color: var(--teal);
+}
+
+/* for cursor  */
+
+.cursor-pointer {
+    cursor: pointer;
+    opacity: .7;
+}
+
+.cursor-pointer:hover {
+    opacity: 1;
+    border: 2px solid transparent
+}
+
+.cursor-pointer:active {
+    border: none;
+}
+
+/* list-group */
+
+/* .bg-pink:hover, .bg-pink:focus, .bg-pink:active {
+    background-color: var(--pink);
+    color: rgb(202, 202, 46);
+}
+
+
+.bg-pink-2:hover, .bg-pink-2:focus, .bg-pink-2:active {
+    background-color: var(--pink2);
+    color: rgb(202, 202, 46);
+} */
