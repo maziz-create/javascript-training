@@ -8,11 +8,6 @@
     <!-- Bootstrap  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-        crossorigin="anonymous"></script>
-    <!-- FontAwesome Icons  -->
-    <script src="https://kit.fontawesome.com/3e4805aee2.js" crossorigin="anonymous"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,29 +19,43 @@
 </head>
 
 <body>
+    <!-- Success Toast -->
+    <div class="mr-1" style="position: relative">
+        <div style="position: absolute; top: 0; right: 0">
+            <div id="liveToast-success" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-body">Listeye eklendi.</div>
+            </div>
+        </div>
+    </div>
+    <!-- Error Toast -->
+    <div class="mr-1" style="position: relative">
+        <div style="position: absolute; top: 0; right: 0">
+            <div id="liveToast-error" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-body">Listeye boş ekleme yapamazsınız!</div>
+            </div>
+        </div>
+    </div>
     <div class="container text-center">
         <header class="p-4 bg-teal border border-2 border-warning rounded">
             <img src="img/kodluyoruz.png" alt="Kodluyoruz-image">
             <h1 class="display-4 text-pink">Yapılacaklar Listesi</h1>
         </header>
-        <ul class="list-group text-start list-group-flush mt-3">
-            <li class="list-group-item pt-3 rounded bg-pink fs-4 float-start">Cras justo odio <i
-                    class="fas fa-times fs-2 float-end cursor-pointer"></i></li>
-        </ul>
-        <ul class="list-group text-start list-group-flush mt-3">
-            <li class="list-group-item pt-3 rounded bg-pink fs-4 float-start">Cras justo odio <i
-                    class="fas fa-times fs-2 float-end cursor-pointer"></i></li>
-        </ul>
-        <ul class="list-group text-start list-group-flush mt-3">
-            <li class="list-group-item pt-3 rounded bg-pink fs-4 float-start">Cras justo odio <i
-                    class="fas fa-times fs-2 float-end cursor-pointer"></i></li>
-        </ul>
-        <ul class="list-group text-start list-group-flush mt-3">
-            <li class="list-group-item pt-3 rounded bg-pink fs-4 float-start">Cras justo odio <i
-                    class="fas fa-times fs-2 float-end cursor-pointer"></i></li>
+        <div class="input-group my-3">
+            <input id="task" type="text" class="form-control" placeholder="Görev ekle">
+            <button class="btn" onclick="addNewElement()" type="button">Ekle</button>
+        </div>
+        <ul id="tasks" class="list-group text-start mt-3">
+            <li class="list-group-item pt-3 rounded fs-4 mb-2">Cras justo odio</li>
+            <li class="list-group-item pt-3 rounded fs-4 mb-2">Cras justo odio </li>
+            <li class="list-group-item pt-3 rounded fs-4 mb-2">Cras justo odio </li>
+            <li class="list-group-item pt-3 rounded fs-4 mb-2">Cras justo odio </li>
+            <li class="list-group-item pt-3 rounded fs-4 mb-2">Cras justo odio </li>
         </ul>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 
