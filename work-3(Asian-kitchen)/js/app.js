@@ -1,3 +1,4 @@
+// menu array 
 const menu = [
     {
         id: 1,
@@ -82,9 +83,13 @@ const menu = [
     },
 ];
 
+// selected content div
 const section = document.querySelector(".section-center");
+// selected filter buttons div
 const btnContainer = document.querySelector(".btn-container");
 
+// the categories in the menu were copied to the new array
+// categories is a string array
 const categories = menu.reduce(
     (values, item) => {
         if (!values.includes(item.category)) {
@@ -92,6 +97,7 @@ const categories = menu.reduce(
         }
         return values;
     },
+    // firstValue
     ["All"]
 );
 
@@ -101,15 +107,18 @@ const categoryList = () => {
             return `<button class="btn btn-outline-dark btn-item" data-id=${category}>${category}</button>`;
         })
         .join("");
-
+    // filled in filter buttons div
     btnContainer.innerHTML = categoryBtns;
+
+    // selected all filter button
     const filterBtns = document.querySelectorAll(".btn-item");
 
     //filter menu
     filterBtns.forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-            const category = e.currentTarget.dataset.id;
-            console.log(category);
+        btn.addEventListener("click", (event) => {
+            // clicked category is assigned to variable
+            const category = event.currentTarget.dataset.id;
+            // console.log(category);   test
             const menuCategory = menu.filter((menuItem) => {
                 if (menuItem.category === category) {
                     return menuItem;
