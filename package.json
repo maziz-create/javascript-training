@@ -1,0 +1,24 @@
+{
+  "name": "work-4",
+  "version": "1.0.0",
+  "description": "Work 1\r ![](views/javascript-work-1.png)",
+  "type": "module",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "work-4(nodejs)/lib/service.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maziz-create/javascript-training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maziz-create/javascript-training/issues"
+  },
+  "homepage": "https://github.com/maziz-create/javascript-training#readme"
+}
